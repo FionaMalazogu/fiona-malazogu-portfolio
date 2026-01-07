@@ -58,7 +58,9 @@
       border:1px solid var(--border);
       background: rgba(255,255,255,.06);
       font-weight:600; font-size:14px;
+      display:inline-flex; align-items:center; justify-content:center;
     }
+    .btn:hover{ transform: translateY(-1px); }
     .btn.primary{
       background: linear-gradient(135deg, rgba(122,162,255,.95), rgba(122,255,218,.65));
       color:#0b1020;
@@ -69,6 +71,7 @@
       font-size:13px; color:var(--muted);
       border:1px solid var(--border);
       padding:6px 10px; border-radius:999px;
+      background: rgba(255,255,255,.04);
     }
 
     .section{ margin-top:18px; }
@@ -86,6 +89,8 @@
 
     .twocol{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
     @media (max-width: 880px){ .twocol{ grid-template-columns:1fr; } }
+
+    ul{ margin:10px 0 0; padding-left:18px; color: var(--muted); }
 
     footer{ margin-top:22px; text-align:center; color:var(--muted); font-size:13px; }
   </style>
@@ -114,10 +119,10 @@
       </p>
 
       <div class="cta">
-        <!-- Update link after uploading PDF -->
-        <a class="btn primary" href="#" target="_blank">Download Resume (PDF)</a>
-        <a class="btn" href="https://github.com/FionaMalazogu" target="_blank">GitHub</a>
-        <a class="btn" href="https://www.linkedin.com/in/fiona-malazogu-9921292ba/" target="_blank">LinkedIn</a>
+        <!-- After you upload the PDF to your GitHub repo, this link will work -->
+        <a class="btn primary" href="./Fiona_Malazogu_CV_FINAL_Business_Analyst.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
+        <a class="btn" href="https://github.com/FionaMalazogu" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/fiona-malazogu-9921292ba/" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn" href="#contact">Contact</a>
       </div>
 
@@ -171,24 +176,32 @@
         <li>Translated requirements into metrics and actionable insights</li>
       </ul>
 
-      <p class="muted"><strong>RBI Bank</strong> — Data & Analytics</p>
+      <p class="muted"><strong>RBI Bank</strong> — Business Intelligence Analyst</p>
       <ul class="muted">
-        <li>Worked with banking data to support reporting and analysis</li>
-        <li>Ensured data reliability and clarity for stakeholders</li>
+        <li>Worked in the Business Intelligence team supporting reporting and decision-making</li>
+        <li>Built and validated data views, metrics, and analyses for internal stakeholders</li>
+        <li>Ensured data quality, consistency, and clear interpretation of results</li>
       </ul>
+
+      <div class="section">
+        <h2>Education</h2>
+        <p class="muted" style="margin:0;">
+          BSc Data Science — Modul University Vienna (GPA 4.0)<br/>
+          Dean’s List recipient
+        </p>
+      </div>
+
     </div>
   </div>
 
   <div id="contact" class="card section">
     <h2>Contact</h2>
     <p class="muted">The fastest way to reach me is via email or LinkedIn.</p>
-    <p>
+    <p style="margin:0;">
       <span class="muted">Email:</span>
-      <a href="mailto:malazogufona@gmail.com" style="color:var(--accent);">
-        malazogufona@gmail.com
-      </a><br/>
+      <a href="mailto:malazogufona@gmail.com" style="color:var(--accent);">malazogufona@gmail.com</a><br/>
       <span class="muted">LinkedIn:</span>
-      <a href="https://www.linkedin.com/in/fiona-malazogu-9921292ba/" target="_blank" style="color:var(--accent);">
+      <a href="https://www.linkedin.com/in/fiona-malazogu-9921292ba/" target="_blank" rel="noopener" style="color:var(--accent);">
         linkedin.com/in/fiona-malazogu-9921292ba
       </a>
     </p>
