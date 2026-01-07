@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fiona Malazogu | Data Scientist</title>
-  <meta name="description" content="Portfolio website of Fiona Malazogu — Data Science graduate with banking experience. Projects, skills, and contact." />
+  <meta name="description" content="Portfolio website of Fiona Malazogu — Data Science graduate with banking and business analysis experience." />
 
   <style>
     :root{
@@ -34,8 +34,8 @@
       border-radius:16px; background: rgba(17,26,51,.55); backdrop-filter: blur(10px);
       position: sticky; top: 14px; z-index: 10;
     }
-    .brand{ font-weight:700; letter-spacing:.3px; }
-    .navlinks{ display:flex; gap:14px; flex-wrap:wrap; font-size:14px; color:var(--muted); }
+    .brand{ font-weight:700; }
+    .navlinks{ display:flex; gap:14px; font-size:14px; color:var(--muted); }
     .navlinks a{ padding:6px 10px; border-radius:12px; }
     .navlinks a:hover{ background: rgba(255,255,255,.06); color: var(--text); }
 
@@ -45,242 +45,163 @@
     .card{
       border:1px solid var(--border);
       background: rgba(17,26,51,.55);
-      border-radius:20px; padding:22px; box-shadow: var(--shadow);
+      border-radius:20px; padding:22px;
+      box-shadow: var(--shadow);
       backdrop-filter: blur(10px);
     }
-    h1{ margin:0 0 10px; font-size: 40px; line-height:1.15; }
-    .subtitle{ color:var(--muted); margin:0 0 18px; font-size:16px; }
-    .pillrow{ display:flex; flex-wrap:wrap; gap:10px; margin-top: 14px; }
+    h1{ margin:0 0 10px; font-size: 40px; }
+    .subtitle{ color:var(--muted); margin-bottom:18px; }
+
+    .cta{ display:flex; gap:10px; flex-wrap:wrap; }
+    .btn{
+      padding:10px 14px; border-radius:14px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.06);
+      font-weight:600; font-size:14px;
+    }
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(122,162,255,.95), rgba(122,255,218,.65));
+      color:#0b1020;
+    }
+
+    .pillrow{ display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
     .pill{
       font-size:13px; color:var(--muted);
       border:1px solid var(--border);
       padding:6px 10px; border-radius:999px;
-      background: rgba(255,255,255,.04);
     }
-    .cta{ display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:10px 14px; border-radius:14px; border:1px solid var(--border);
-      background: rgba(255,255,255,.06);
-      font-weight:600; font-size:14px;
-    }
-    .btn:hover{ transform: translateY(-1px); }
-    .btn.primary{
-      background: linear-gradient(135deg, rgba(122,162,255,.95), rgba(122,255,218,.65));
-      border-color: rgba(255,255,255,.20);
-      color:#0b1020;
-    }
-    .section{ margin-top: 18px; }
-    .section h2{ margin:0 0 10px; font-size:18px; letter-spacing:.2px; }
+
+    .section{ margin-top:18px; }
     .muted{ color:var(--muted); }
 
-    .grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:14px; }
-    @media (max-width: 980px){ .grid{ grid-template-columns: 1fr; } }
+    .grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:14px; }
+    @media (max-width: 980px){ .grid{ grid-template-columns:1fr; } }
 
     .project{
-      padding:18px; border-radius:18px; border:1px solid var(--border);
+      padding:18px; border-radius:18px;
+      border:1px solid var(--border);
       background: rgba(255,255,255,.04);
       display:flex; flex-direction:column; gap:10px;
     }
-    .project h3{ margin:0; font-size:16px; }
-    .tags{ display:flex; flex-wrap:wrap; gap:8px; }
-    .tag{ font-size:12px; color:var(--muted); border:1px solid var(--border); padding:4px 8px; border-radius:999px; }
-    .projlinks{ display:flex; gap:10px; margin-top:auto; }
-    .projlinks a{ font-size:13px; color: var(--accent); }
-    .projlinks a:hover{ text-decoration: underline; }
 
-    .twocol{ display:grid; grid-template-columns: 1fr 1fr; gap:14px; }
-    @media (max-width: 880px){ .twocol{ grid-template-columns: 1fr; } }
+    .twocol{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    @media (max-width: 880px){ .twocol{ grid-template-columns:1fr; } }
 
-    ul{ margin:10px 0 0; padding-left:18px; color: var(--muted); }
     footer{ margin-top:22px; text-align:center; color:var(--muted); font-size:13px; }
-    .small{ font-size:13px; }
   </style>
 </head>
 
 <body>
-  <div class="container">
+<div class="container">
 
-    <div class="nav">
-      <div class="brand">Fiona Malazogu</div>
-      <div class="navlinks">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-      </div>
+  <div class="nav">
+    <div class="brand">Fiona Malazogu</div>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
     </div>
-
-    <div class="hero">
-      <div class="card">
-        <h1>Data Scientist focused on decision-ready analytics.</h1>
-        <p class="subtitle">
-          Data Science graduate (Modul University Vienna) with banking experience at RBI Bank.
-          I build clear, reliable analyses and models that support real business decisions.
-        </p>
-
-        <div class="cta">
-          <!-- Replace # with your real links -->
-          <a class="btn primary" href="#" target="_blank" rel="noopener">Download Resume (PDF)</a>
-          <a class="btn" href="#" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="#" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn" href="#contact">Contact</a>
-        </div>
-
-        <div class="pillrow" aria-label="Highlights">
-          <span class="pill">Python • SQL • Statistics</span>
-          <span class="pill">Machine Learning • Data Modeling</span>
-          <span class="pill">Banking / Risk Data Experience</span>
-          <span class="pill">Clear communication & stakeholder focus</span>
-        </div>
-      </div>
-
-      <div class="card">
-        <h2 style="margin-top:0;">Quick snapshot</h2>
-        <p class="muted small" style="margin-top:6px;">
-          Based in Europe • Open to roles in data science, analytics, and decision intelligence.
-        </p>
-
-        <div class="section">
-          <h2>What I’m strong at</h2>
-          <ul>
-            <li>Turning messy datasets into trustworthy insights</li>
-            <li>Building interpretable models and explaining trade-offs</li>
-            <li>Communicating results clearly (so decisions are easy)</li>
-          </ul>
-        </div>
-
-        <div class="section">
-          <h2>Currently</h2>
-          <p class="muted small" style="margin:0;">
-            Improving my portfolio with end-to-end projects and strong write-ups (problem → approach → results → recommendations).
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div id="about" class="card section">
-      <h2>About</h2>
-      <p class="muted" style="margin:0;">
-        I’m Fiona, a Data Science graduate from Modul University Vienna (4.0 GPA) with professional experience in banking at RBI Bank.
-        I enjoy work where analytics leads to concrete actions — clearer reporting, better risk understanding, improved processes, or measurable business outcomes.
-      </p>
-    </div>
-
-    <div id="projects" class="card section">
-      <h2>Projects</h2>
-      <p class="muted" style="margin-top:0;">
-        Replace the placeholders below with your real projects. Aim for 3–4 strong ones with clear problem framing and outcomes.
-      </p>
-
-      <div class="grid" style="margin-top:14px;">
-        <div class="project">
-          <h3>Risk / Anomaly Detection (Banking-style dataset)</h3>
-          <p class="muted small">
-            Built an interpretable model to identify unusual patterns and created a short recommendation memo for stakeholders.
-          </p>
-          <div class="tags">
-            <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span><span class="tag">Explainability</span>
-          </div>
-          <div class="projlinks">
-            <a href="#" target="_blank" rel="noopener">GitHub</a>
-            <a href="#" target="_blank" rel="noopener">Write-up</a>
-          </div>
-        </div>
-
-        <div class="project">
-          <h3>End-to-End ML Pipeline (Messy → Clean → Model)</h3>
-          <p class="muted small">
-            Cleaned raw data, engineered features, trained models, and documented choices and trade-offs for reliability.
-          </p>
-          <div class="tags">
-            <span class="tag">Data Cleaning</span><span class="tag">Feature Engineering</span><span class="tag">ML</span><span class="tag">Evaluation</span>
-          </div>
-          <div class="projlinks">
-            <a href="#" target="_blank" rel="noopener">GitHub</a>
-            <a href="#" target="_blank" rel="noopener">Report</a>
-          </div>
-        </div>
-
-        <div class="project">
-          <h3>Decision Dashboard (KPI Storytelling)</h3>
-          <p class="muted small">
-            Created a lightweight dashboard focused on the decisions it supports, with clear definitions and assumptions.
-          </p>
-          <div class="tags">
-            <span class="tag">SQL</span><span class="tag">Visualization</span><span class="tag">Metrics</span><span class="tag">Storytelling</span>
-          </div>
-          <div class="projlinks">
-            <a href="#" target="_blank" rel="noopener">Demo</a>
-            <a href="#" target="_blank" rel="noopener">Case Study</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="twocol section">
-      <div id="skills" class="card">
-        <h2>Skills</h2>
-        <div class="section">
-          <h2 style="font-size:16px;">Data & Analytics</h2>
-          <p class="muted small" style="margin:0;">
-            Python, SQL, statistics, data wrangling, machine learning, evaluation, visualization.
-          </p>
-        </div>
-        <div class="section">
-          <h2 style="font-size:16px;">Decision Skills</h2>
-          <p class="muted small" style="margin:0;">
-            Problem framing, defining metrics, explaining trade-offs, stakeholder communication, writing concise insights.
-          </p>
-        </div>
-        <div class="section">
-          <h2 style="font-size:16px;">Tools</h2>
-          <p class="muted small" style="margin:0;">
-            Git/GitHub, Jupyter, Excel/Sheets, basic data pipelines (as applicable).
-          </p>
-        </div>
-      </div>
-
-      <div id="experience" class="card">
-        <h2>Experience</h2>
-        <p class="muted small" style="margin-top:0;">
-          <strong style="color:var(--text);">RBI Bank</strong> — Data/Analytics (7 months)
-        </p>
-        <ul>
-          <li>Worked with real banking data to support reporting and analysis needs.</li>
-          <li>Improved reliability by validating inputs, definitions, and assumptions.</li>
-          <li>Communicated findings clearly for internal stakeholders and teams.</li>
-        </ul>
-
-        <div class="section">
-          <h2 style="font-size:16px;">Education</h2>
-          <p class="muted small" style="margin:0;">
-            BSc Data Science — Modul University Vienna (GPA 4.0)
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div id="contact" class="card section">
-      <h2>Contact</h2>
-      <p class="muted" style="margin-top:0;">
-        The fastest way to reach me is via email or LinkedIn.
-      </p>
-      <p style="margin:0;">
-        <span class="muted">Email:</span> <a href="mailto:your.email@example.com" style="color:var(--accent);">your.email@example.com</a><br/>
-        <span class="muted">LinkedIn:</span> <a href="#" target="_blank" rel="noopener" style="color:var(--accent);">linkedin.com/in/your-handle</a>
-      </p>
-    </div>
-
-    <footer>
-      © <span id="y"></span> Fiona Malazogu • Built with HTML/CSS • Hosted on GitHub Pages
-    </footer>
-
   </div>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+  <div class="hero">
+    <div class="card">
+      <h1>Data Scientist focused on decision-ready analytics.</h1>
+      <p class="subtitle">
+        Data Science graduate (Modul University Vienna) with experience across banking and business analysis.
+        I turn complex data into clear insights, reliable models, and actionable recommendations.
+      </p>
+
+      <div class="cta">
+        <!-- Update link after uploading PDF -->
+        <a class="btn primary" href="#" target="_blank">Download Resume (PDF)</a>
+        <a class="btn" href="https://github.com/FionaMalazogu" target="_blank">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/fiona-malazogu-9921292ba/" target="_blank">LinkedIn</a>
+        <a class="btn" href="#contact">Contact</a>
+      </div>
+
+      <div class="pillrow">
+        <span class="pill">Python • SQL • Statistics</span>
+        <span class="pill">Machine Learning • Data Modeling</span>
+        <span class="pill">Business & Stakeholder Communication</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Quick snapshot</h2>
+      <p class="muted">
+        Europe-based. Interested in roles where analytics, modeling, and communication combine to improve decisions, performance, and strategy.
+      </p>
+
+      <h2>What I’m strong at</h2>
+      <ul class="muted">
+        <li>Structuring messy, real-world datasets into trustworthy analysis</li>
+        <li>Building interpretable models and making trade-offs explicit</li>
+        <li>Communicating insights clearly so teams can act with confidence</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="about" class="card section">
+    <h2>About</h2>
+    <p class="muted">
+      I’m Fiona, a Data Science graduate (GPA 4.0) with professional experience in banking and business analysis.
+      I enjoy work where analytics leads to concrete outcomes and measurable impact.
+    </p>
+  </div>
+
+  <div id="projects" class="card section">
+    <h2>Projects</h2>
+    <p class="muted">Projects will be added next with full write-ups.</p>
+  </div>
+
+  <div class="twocol section">
+    <div id="skills" class="card">
+      <h2>Skills</h2>
+      <p class="muted">Python, SQL, statistics, data wrangling, machine learning, visualization.</p>
+    </div>
+
+    <div id="experience" class="card">
+      <h2>Experience</h2>
+
+      <p class="muted"><strong>Data4X</strong> — Business Analyst</p>
+      <ul class="muted">
+        <li>Supported business decisions through structured analysis and reporting</li>
+        <li>Translated requirements into metrics and actionable insights</li>
+      </ul>
+
+      <p class="muted"><strong>RBI Bank</strong> — Data & Analytics</p>
+      <ul class="muted">
+        <li>Worked with banking data to support reporting and analysis</li>
+        <li>Ensured data reliability and clarity for stakeholders</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="contact" class="card section">
+    <h2>Contact</h2>
+    <p class="muted">The fastest way to reach me is via email or LinkedIn.</p>
+    <p>
+      <span class="muted">Email:</span>
+      <a href="mailto:malazogufona@gmail.com" style="color:var(--accent);">
+        malazogufona@gmail.com
+      </a><br/>
+      <span class="muted">LinkedIn:</span>
+      <a href="https://www.linkedin.com/in/fiona-malazogu-9921292ba/" target="_blank" style="color:var(--accent);">
+        linkedin.com/in/fiona-malazogu-9921292ba
+      </a>
+    </p>
+  </div>
+
+  <footer>
+    © <span id="y"></span> Fiona Malazogu • GitHub Pages
+  </footer>
+
+</div>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
